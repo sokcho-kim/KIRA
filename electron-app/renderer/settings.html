@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIRA 설정</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🤖 KIRA 설정</h1>
+      <p class="subtitle">Slack Bot 환경 설정</p>
+    </header>
+
+    <div class="content">
+      <section class="section">
+        <h2>필수 설정</h2>
+
+        <div class="form-group">
+          <label for="SLACK_BOT_TOKEN">Slack Bot Token</label>
+          <input type="password" id="SLACK_BOT_TOKEN" placeholder="xoxb-...">
+          <small>Bot User OAuth Token (xoxb-로 시작)</small>
+        </div>
+
+        <div class="form-group">
+          <label for="SLACK_APP_TOKEN">Slack App Token</label>
+          <input type="password" id="SLACK_APP_TOKEN" placeholder="xapp-...">
+          <small>App-Level Token (xapp-로 시작)</small>
+        </div>
+
+        <div class="form-group">
+          <label for="SLACK_SIGNING_SECRET">Slack Signing Secret</label>
+          <input type="password" id="SLACK_SIGNING_SECRET" placeholder="">
+          <small>App Credentials의 Signing Secret</small>
+        </div>
+
+        <div class="form-group">
+          <label for="SLACK_TEAM_ID">Slack Team ID</label>
+          <input type="text" id="SLACK_TEAM_ID" placeholder="T0XXXXXXXXX">
+          <small>워크스페이스 Team ID</small>
+        </div>
+
+        <div class="form-group">
+          <label for="BOT_NAME">봇 이름</label>
+          <input type="text" id="BOT_NAME" placeholder="KIRA">
+        </div>
+
+        <div class="form-group">
+          <label for="BOT_EMAIL">봇 이메일</label>
+          <input type="email" id="BOT_EMAIL" placeholder="bot@company.com">
+        </div>
+
+        <div class="form-group">
+          <label for="FILESYSTEM_BASE_DIR">데이터 저장 경로</label>
+          <input type="text" id="FILESYSTEM_BASE_DIR" placeholder="/Users/yourname/KIRA/data">
+          <small>파일 및 데이터 저장 위치</small>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>선택 설정</h2>
+
+        <div class="form-group">
+          <label for="MS365_MCP_CLIENT_ID">MS365 Client ID (이메일 통합)</label>
+          <input type="text" id="MS365_MCP_CLIENT_ID" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="MS365_MCP_CLIENT_SECRET">MS365 Client Secret</label>
+          <input type="password" id="MS365_MCP_CLIENT_SECRET" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="MS365_MCP_TENANT_ID">MS365 Tenant ID</label>
+          <input type="text" id="MS365_MCP_TENANT_ID" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="DEEPL_API_KEY">DeepL API Key (문서 번역)</label>
+          <input type="password" id="DEEPL_API_KEY" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="PERPLEXITY_API_KEY">Perplexity API Key (웹 검색)</label>
+          <input type="password" id="PERPLEXITY_API_KEY" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="CONFLUENCE_SITE_URL">Confluence Site URL</label>
+          <input type="text" id="CONFLUENCE_SITE_URL" placeholder="https://company.atlassian.net">
+        </div>
+
+        <div class="form-group">
+          <label for="CONFLUENCE_USER_EMAIL">Confluence 이메일</label>
+          <input type="email" id="CONFLUENCE_USER_EMAIL" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="CONFLUENCE_API_TOKEN">Confluence API Token</label>
+          <input type="password" id="CONFLUENCE_API_TOKEN" placeholder="">
+        </div>
+      </section>
+    </div>
+
+    <!-- Server Log Section (hidden by default) -->
+    <section id="logSection" class="section log-section" style="display: none;">
+      <h2>서버 로그</h2>
+      <div id="logContainer" class="log-container"></div>
+    </section>
+
+    <footer>
+      <div class="button-group">
+        <button id="saveBtn" class="btn btn-primary">저장</button>
+        <button id="startBtn" class="btn btn-success" style="display: none;">시작</button>
+        <button id="cancelBtn" class="btn btn-secondary">취소</button>
+      </div>
+      <div id="status" class="status"></div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+/* Hero 이미지만 타겟팅 */
+.VPHome .VPHero .image-container img {
+  max-width: 600px !important;
+}

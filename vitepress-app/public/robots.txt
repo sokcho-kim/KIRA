@@ -1,0 +1,11 @@
+# robots.txt for KIRA Documentation
+# https://kira.krafton-ai.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kira.krafton-ai.com/sitemap.xml
+
+# Block download files from indexing
+Disallow: /download/

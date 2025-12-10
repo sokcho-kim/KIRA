@@ -1,0 +1,188 @@
+{
+  "app": {
+    "title": "KIRA"
+  },
+  "nav": {
+    "start": "활동 시작",
+    "settings": "환경변수 설정"
+  },
+  "landing": {
+    "preparing": "{{botName}}님이 업무를 준비 중입니다.",
+    "startButton": "시작하기",
+    "forSlack": "for Slack"
+  },
+  "server": {
+    "title": "서버 로그",
+    "subtitle": "실시간 서버 활동",
+    "stop": "서버 중지",
+    "stopping": "중지 중...",
+    "starting": "시작 중...",
+    "statusRunning": "🟢 서버 실행 중",
+    "statusStopped": "⚫ 서버 중지됨",
+    "waitingEnter": "⌨️  Waiting for ENTER key..."
+  },
+  "settings": {
+    "title": "환경변수 설정",
+    "subtitle": "Slack Bot 환경 설정",
+    "save": "저장",
+    "saved": "✓ 설정이 저장되었습니다!",
+    "saveFailed": "✗ 저장에 실패했습니다",
+    "sections": {
+      "slackConnection": "필수 설정 - Slack 연동",
+      "botInfo": "필수 설정 - 봇 정보",
+      "mcp": "MCP 설정",
+      "remoteMcp": "Remote MCP 설정",
+      "computerUse": "Computer Use",
+      "webServer": "웹 서버 / 음성 수신 채널",
+      "activeChannels": "능동 수신 채널",
+      "proactive": "선제적 제안 기능"
+    },
+    "beta": "beta"
+  },
+  "slack": {
+    "botToken": "Slack Bot Token",
+    "botTokenHint": "Bot User OAuth Token (xoxb-로 시작)",
+    "appToken": "Slack App Token",
+    "appTokenHint": "App-Level Token (xapp-로 시작)",
+    "signingSecret": "Slack Signing Secret",
+    "signingSecretHint": "App Credentials의 Signing Secret",
+    "teamId": "Slack Team ID",
+    "teamIdHint": "워크스페이스 Team ID"
+  },
+  "bot": {
+    "name": "봇 이름",
+    "email": "봇 이메일",
+    "organization": "봇 조직",
+    "organizationHint": "봇이 속한 조직 구조",
+    "team": "봇 팀",
+    "authorizedUsersEn": "권한 사용자 (영문)",
+    "authorizedUsersKr": "권한 사용자 (한글)",
+    "commaSeparated": "쉼표로 구분",
+    "role": "직군/역할",
+    "roleHint": "봇의 직군과 주요 역할을 설명하세요",
+    "dataPath": "데이터 저장 경로",
+    "dataPathHint": "파일 및 데이터 저장 위치"
+  },
+  "mcp": {
+    "perplexity": "Perplexity",
+    "deepl": "DeepL",
+    "github": "GitHub",
+    "gitlab": "GitLab",
+    "ms365": "Microsoft 365 (Outlook/OneDrive/SharePoint)",
+    "atlassian": "Atlassian (Jira/Confluence)",
+    "tableau": "Tableau",
+    "x": "X (Twitter)",
+    "clova": "Clova Speech",
+    "apiKey": "API Key",
+    "accessToken": "Access Token",
+    "personalAccessToken": "Personal Access Token",
+    "apiUrl": "API URL",
+    "clientId": "Client ID",
+    "tenantId": "Tenant ID",
+    "clientSecret": "Client Secret",
+    "siteUrl": "Site URL",
+    "serverUrl": "Server URL",
+    "siteName": "Site Name",
+    "patName": "PAT Name",
+    "patValue": "PAT Value",
+    "invokeUrl": "Invoke URL",
+    "secretKey": "Secret Key",
+    "oauth2ClientId": "OAuth2 Client ID",
+    "oauth2ClientSecret": "OAuth2 Client Secret"
+  },
+  "hints": {
+    "githubPat": "GitHub Settings → Developer settings → Personal access tokens",
+    "azureApp": "portal.azure.com에서 앱 등록 후 발급",
+    "tableauPat": "Tableau Server → My Account Settings → Personal Access Tokens",
+    "xApi": "developer.twitter.com → Projects & Apps → Keys and tokens",
+    "lokkaOauth": "MS365 MCP는 첫 실행 시 브라우저에서 자동으로 OAuth 인증을 진행합니다.",
+    "atlassianOauth": "Atlassian MCP는 첫 실행 시 브라우저에서 자동으로 OAuth 인증을 진행합니다.",
+    "tableauDefaultSite": "Default site인 경우 비워두세요",
+    "confluenceDefaultPage": "\"위키에 올려줘\" 요청 시 사용할 기본 페이지"
+  },
+  "notices": {
+    "webInterfaceRequired": "웹 인터페이스 필요:",
+    "xRequiresWeb": "X (Twitter) 기능을 사용하려면 아래 \"웹 서버/음성 수신 채널\" 섹션에서 Web Interface를 활성화해야 합니다.",
+    "clovaRequiresWeb": "Clova Speech 기능을 사용하려면 아래 \"웹 서버/음성 수신 채널\" 섹션에서 Web Interface를 활성화해야 합니다."
+  },
+  "computerUse": {
+    "chrome": "Chrome",
+    "chromeDesc": "Playwright 자동화 시 Chrome 프로필 설정",
+    "alwaysProfile": "항상 프로필 설정 열기",
+    "alwaysProfileDesc": "매번 브라우저를 열어 추가 로그인 설정"
+  },
+  "webInterface": {
+    "title": "Web Interface",
+    "info": "웹 서버 정보:",
+    "infoDesc": "포트 8000에서 HTTPS로 실행됩니다. X(Twitter), Clova Speech, 음성 입력 기능에 필요합니다.",
+    "authProvider": "인증 방식",
+    "authProviderHint": "웹 인터페이스 접근 시 로그인 방식 선택",
+    "authMicrosoft": "Microsoft 365",
+    "authSlack": "Slack",
+    "baseUrl": "Base URL (외부 접속용)",
+    "baseUrlHint": "외부에서 접속할 때 사용할 URL (옵션)",
+    "slackClientId": "Slack Client ID",
+    "slackClientIdHint": "Slack App의 Basic Information > App Credentials > Client ID",
+    "slackClientSecret": "Slack Client Secret",
+    "slackClientSecretHint": "Slack App의 Basic Information > App Credentials > Client Secret",
+    "ms365ClientId": "Microsoft 365 Client ID",
+    "ms365ClientIdHint": "Azure App Registration의 Client ID",
+    "ms365ClientSecret": "Microsoft 365 Client Secret",
+    "ms365ClientSecretHint": "Azure App Registration의 Client Secret",
+    "ms365TenantId": "Microsoft 365 Tenant ID",
+    "ms365TenantIdHint": "Azure AD의 Tenant ID"
+  },
+  "channels": {
+    "outlook": "Outlook",
+    "outlookWarning": "MS365 MCP를 먼저 활성화하세요",
+    "outlookInfo": "받은 메일에서 중요한 작업을 추출하여 자동으로 수행합니다",
+    "confluence": "Confluence",
+    "confluenceWarning": "Atlassian MCP를 먼저 활성화하세요",
+    "confluenceInfo": "업데이트된 페이지를 감지하고 중요 내용을 메모리에 저장합니다",
+    "jira": "Jira",
+    "jiraWarning": "Atlassian MCP를 먼저 활성화하세요",
+    "jiraInfo": "할당된 이슈를 확인하고 필요한 작업을 자동으로 수행합니다",
+    "checkInterval": "체크 주기 (분)",
+    "checkIntervalHint": "받은 메일함 확인 주기",
+    "jiraCheckIntervalHint": "할당된 이슈 확인 주기",
+    "checkHours": "조회 시간 범위 (시간)",
+    "checkHoursHint": "최근 N시간 내 업데이트된 페이지만 조회"
+  },
+  "suggester": {
+    "title": "Dynamic Suggester",
+    "interval": "제안 주기 (분)"
+  },
+  "dialogs": {
+    "uvRequired": "uv 설치 필요",
+    "uvMessage": "Python 패키지 관리자(uv)가 필요합니다.\n자동으로 설치하시겠습니까?",
+    "autoInstall": "자동 설치",
+    "cancel": "취소",
+    "installComplete": "설치 완료",
+    "uvInstallSuccess": "uv 설치가 완료되었습니다.\n이제 서버를 시작할 수 있습니다.",
+    "installFailed": "설치 실패",
+    "uvInstallFailed": "uv 설치에 실패했습니다.\n수동 설치: curl -LsSf https://astral.sh/uv/install.sh | sh",
+    "updateAvailable": "업데이트 가능",
+    "updateAvailableMessage": "새 버전 {{version}}이 있습니다.\n백그라운드에서 다운로드를 시작합니다.",
+    "ok": "확인",
+    "updateReady": "업데이트 준비 완료",
+    "updateReadyMessage": "버전 {{version}}이 다운로드되었습니다.\n지금 재시작하여 업데이트를 적용하시겠습니까?",
+    "restartNow": "지금 재시작",
+    "later": "나중에"
+  },
+  "language": {
+    "label": "언어",
+    "ko": "한국어",
+    "en": "English"
+  },
+  "remoteMcp": {
+    "info": "Custom Remote MCP 서버를 추가할 수 있습니다. 각 서버는 mcp__NAME__* 형식의 도구로 사용됩니다.",
+    "addServer": "서버 추가",
+    "name": "서버 이름",
+    "nameHint": "영문 소문자, 숫자, 하이픈만 사용 (예: myserver)",
+    "url": "서버 URL",
+    "instruction": "사용 지침",
+    "instructionPlaceholder": "이 MCP를 언제, 어떻게 사용할지 설명하세요",
+    "toolHint": "이름을 입력하면 도구 형식이 표시됩니다",
+    "toolHintFormat": "다음의 경우에 반드시 mcp__{name}__*를 사용하세요: {instruction}"
+  }
+}

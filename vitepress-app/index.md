@@ -1,0 +1,125 @@
+---
+layout: home
+title: KIRA - AI Virtual Coworker | Hire Your AI Assistant in 5 Minutes
+description: KIRA is an AI virtual coworker that works 24/7. Install a desktop app and get your own AI assistant integrated with Slack, Outlook, Confluence, Jira, and more. No coding required.
+head:
+  - - meta
+    - name: keywords
+      content: AI assistant, virtual coworker, Slack bot, AI agent, desktop app, productivity, automation, Claude AI, KRAFTON AI
+  - - meta
+    - property: og:title
+      content: KIRA - AI Virtual Coworker | Your 24/7 AI Assistant
+  - - meta
+    - property: og:description
+      content: Install a desktop app and hire your own AI virtual coworker. Works 24/7, integrates with Slack, Outlook, Confluence, and more.
+  - - meta
+    - property: og:url
+      content: https://kira.krafton-ai.com/
+
+hero:
+  name: KIRA
+  text: Your AI Virtual Coworker
+  tagline: A 24/7 AI Agent Starting with Just a Desktop App
+  image:
+    src: /images/screenshots/hero-kira.png
+    alt: KIRA
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /getting-started
+    - theme: alt
+      text: KIRA for macOS (Apple Silicon)
+      link: https://kira.krafton-ai.com/download/KIRA-0.1.7-arm64.dmg
+
+features:
+  - icon: 💬
+    title: Easy Conversations
+    details: Chat naturally anywhere—Slack DMs, channels, or threads. Just describe complex tasks in plain language.
+
+  - icon: 🧠
+    title: Smart Memory
+    details: KIRA remembers conversations, project info, and important decisions. No need to repeat yourself.
+
+  - icon: 📧
+    title: Automatic Email Processing
+    details: Monitors Outlook emails and automatically extracts assigned tasks to execute them directly.
+
+  - icon: 📄
+    title: Document & Issue Tracking
+    details: Confluence updates are saved to memory, and assigned Jira tasks are executed automatically.
+
+  - icon: 🎯
+    title: Proactive Suggestions
+    details: KIRA analyzes memory to suggest necessary tasks in advance. Nothing gets missed.
+
+  - icon: 🎤
+    title: Voice Input
+    details: Chat via voice through the web interface. Great when typing isn't convenient.
+
+  - icon: ⚙️
+    title: Simple Setup
+    details: No coding or server configuration needed. Manage everything through an easy GUI.
+
+  - icon: 🔒
+    title: Local First
+    details: All data is stored on your computer. Privacy protection is built in.
+---
+
+## 💡 What is KIRA?
+
+> **KIRA** = **K**RAFTON **I**NTELLIGENCE **R**OOKIE **A**GENT
+
+KIRA is an open-source project that repackages **KRIS (KRAFTON Intelligence System)**—an AI agent system successfully used internally at KRAFTON—into a "virtual coworker" concept that anyone can install and use as a standalone desktop application. No servers, no cloud setup, just install and go.
+
+---
+
+## 🚀 Quick Start
+
+Getting started with KIRA is really simple:
+
+1. **Download the app**: Download the macOS installer
+2. **Install**: Install it like any regular app
+3. **Connect Slack**: Open the app and just enter your Slack tokens!
+
+::: tip macOS Only
+KIRA currently supports macOS 10.15 (Catalina) or later only.
+:::
+
+For more details, check out the [Getting Started guide](/getting-started).
+
+---
+
+## 💡 Who is this for?
+
+KIRA is built for **non-developers**:
+
+- **Marketers**: Automate daily reports, manage social media
+- **Sales**: Extract email tasks, manage customer information
+- **Planners**: Track document updates, organize meeting notes
+- **Founders**: An AI assistant for all your work
+
+No technical knowledge required. It's as easy as installing Microsoft Office.
+
+---
+
+## 🎯 Why KIRA?
+
+### 🔧 **No Setup Required**
+No servers, cloud configuration, or terminal commands needed. Install the app and complete all settings through the GUI.
+
+### 💰 **Reasonable Cost**
+Use your own Claude API key, so you only pay for what you use. No subscriptions or hidden fees.
+
+### 🏠 **Your Data is Yours**
+All memory and data is stored on your computer. No worries about data leaks.
+
+### 🔌 **Rich Integrations**
+Connect directly with work tools like Slack, Outlook, Confluence, Jira, GitLab, X, and more.
+
+---
+
+<div style="text-align: center; margin-top: 60px;">
+  <h2>Get Started Now</h2>
+  <p style="font-size: 18px;">Hire your own AI virtual coworker in just 5 minutes</p>
+  <a href="/getting-started" style="display: inline-block; margin-top: 20px; padding: 12px 32px; background: #3eaf7c; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Get Started →</a>
+</div>

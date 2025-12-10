@@ -1,0 +1,104 @@
+{
+  "name": "kira",
+  "version": "0.1.7",
+  "description": "KIRA Slack Bot - Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac",
+    "deploy": "electron-builder --mac --publish always"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "ai",
+    "assistant"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^39.1.2",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "electron-log": "^5.0.0",
+    "electron-updater": "^6.1.7",
+    "sharp": "^0.34.5"
+  },
+  "build": {
+    "appId": "com.krafton.kira",
+    "productName": "KIRA",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "icons/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "entitlements.mac.plist",
+      "entitlementsInherit": "entitlements.mac.plist",
+      "notarize": true
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "files": [
+      "**/*",
+      "!**/node_modules/**/locales/!(en|ko).pak"
+    ],
+    "extraResources": [
+      {
+        "from": "../app",
+        "to": "app",
+        "filter": [
+          "**/*",
+          "!config/env/dev.env",
+          "!**/__pycache__/**",
+          "!**/*.pyc"
+        ]
+      },
+      {
+        "from": "../pyproject.toml",
+        "to": "."
+      },
+      {
+        "from": "../uv.lock",
+        "to": "."
+      },
+      {
+        "from": "../.claude",
+        "to": ".claude"
+      }
+    ],
+    "publish": {
+      "provider": "s3",
+      "bucket": "kira-releases",
+      "region": "ap-northeast-2",
+      "path": "/download",
+      "acl": "public-read"
+    }
+  }
+}

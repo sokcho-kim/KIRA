@@ -1,0 +1,188 @@
+{
+  "app": {
+    "title": "KIRA"
+  },
+  "nav": {
+    "start": "Start",
+    "settings": "Settings"
+  },
+  "landing": {
+    "preparing": "{{botName}} is ready to work.",
+    "startButton": "Start",
+    "forSlack": "for Slack"
+  },
+  "server": {
+    "title": "Server Logs",
+    "subtitle": "Real-time server activity",
+    "stop": "Stop Server",
+    "stopping": "Stopping...",
+    "starting": "Starting...",
+    "statusRunning": "🟢 Server Running",
+    "statusStopped": "⚫ Server Stopped",
+    "waitingEnter": "⌨️  Waiting for ENTER key..."
+  },
+  "settings": {
+    "title": "Environment Settings",
+    "subtitle": "Slack Bot Configuration",
+    "save": "Save",
+    "saved": "✓ Settings saved successfully!",
+    "saveFailed": "✗ Failed to save settings",
+    "sections": {
+      "slackConnection": "Required - Slack Connection",
+      "botInfo": "Required - Bot Information",
+      "mcp": "MCP Settings",
+      "remoteMcp": "Remote MCP Settings",
+      "computerUse": "Computer Use",
+      "webServer": "Web Server / Voice Input",
+      "activeChannels": "Active Receivers",
+      "proactive": "Proactive Suggestions"
+    },
+    "beta": "beta"
+  },
+  "slack": {
+    "botToken": "Slack Bot Token",
+    "botTokenHint": "Bot User OAuth Token (starts with xoxb-)",
+    "appToken": "Slack App Token",
+    "appTokenHint": "App-Level Token (starts with xapp-)",
+    "signingSecret": "Slack Signing Secret",
+    "signingSecretHint": "Signing Secret from App Credentials",
+    "teamId": "Slack Team ID",
+    "teamIdHint": "Workspace Team ID"
+  },
+  "bot": {
+    "name": "Bot Name",
+    "email": "Bot Email",
+    "organization": "Bot Organization",
+    "organizationHint": "Organization structure the bot belongs to",
+    "team": "Bot Team",
+    "authorizedUsersEn": "Authorized Users (English)",
+    "authorizedUsersKr": "Authorized Users (Korean)",
+    "commaSeparated": "Comma separated",
+    "role": "Role/Position",
+    "roleHint": "Describe the bot's role and main responsibilities",
+    "dataPath": "Data Storage Path",
+    "dataPathHint": "Location for files and data storage"
+  },
+  "mcp": {
+    "perplexity": "Perplexity",
+    "deepl": "DeepL",
+    "github": "GitHub",
+    "gitlab": "GitLab",
+    "ms365": "Microsoft 365 (Outlook/OneDrive/SharePoint)",
+    "atlassian": "Atlassian (Jira/Confluence)",
+    "tableau": "Tableau",
+    "x": "X (Twitter)",
+    "clova": "Clova Speech",
+    "apiKey": "API Key",
+    "accessToken": "Access Token",
+    "personalAccessToken": "Personal Access Token",
+    "apiUrl": "API URL",
+    "clientId": "Client ID",
+    "tenantId": "Tenant ID",
+    "clientSecret": "Client Secret",
+    "siteUrl": "Site URL",
+    "serverUrl": "Server URL",
+    "siteName": "Site Name",
+    "patName": "PAT Name",
+    "patValue": "PAT Value",
+    "invokeUrl": "Invoke URL",
+    "secretKey": "Secret Key",
+    "oauth2ClientId": "OAuth2 Client ID",
+    "oauth2ClientSecret": "OAuth2 Client Secret"
+  },
+  "hints": {
+    "githubPat": "GitHub Settings → Developer settings → Personal access tokens",
+    "azureApp": "Get from portal.azure.com after app registration",
+    "tableauPat": "Tableau Server → My Account Settings → Personal Access Tokens",
+    "xApi": "developer.twitter.com → Projects & Apps → Keys and tokens",
+    "lokkaOauth": "MS365 MCP will automatically open browser for OAuth on first run.",
+    "atlassianOauth": "Atlassian MCP will automatically open browser for OAuth on first run.",
+    "tableauDefaultSite": "Leave empty for Default site",
+    "confluenceDefaultPage": "Default page for \"put this on wiki\" requests"
+  },
+  "notices": {
+    "webInterfaceRequired": "Web Interface Required:",
+    "xRequiresWeb": "X (Twitter) features require Web Interface to be enabled in the \"Web Server / Voice Input\" section below.",
+    "clovaRequiresWeb": "Clova Speech features require Web Interface to be enabled in the \"Web Server / Voice Input\" section below."
+  },
+  "computerUse": {
+    "chrome": "Chrome",
+    "chromeDesc": "Chrome profile settings for Playwright automation",
+    "alwaysProfile": "Always Open Profile Setup",
+    "alwaysProfileDesc": "Open browser each time for additional login settings"
+  },
+  "webInterface": {
+    "title": "Web Interface",
+    "info": "Web Server Info:",
+    "infoDesc": "Runs on port 8000 with HTTPS. Required for X(Twitter), Clova Speech, and voice input features.",
+    "authProvider": "Authentication Method",
+    "authProviderHint": "Login method for web interface access",
+    "authMicrosoft": "Microsoft 365",
+    "authSlack": "Slack",
+    "baseUrl": "Base URL (External Access)",
+    "baseUrlHint": "URL for external access (optional)",
+    "slackClientId": "Slack Client ID",
+    "slackClientIdHint": "Slack App > Basic Information > App Credentials > Client ID",
+    "slackClientSecret": "Slack Client Secret",
+    "slackClientSecretHint": "Slack App > Basic Information > App Credentials > Client Secret",
+    "ms365ClientId": "Microsoft 365 Client ID",
+    "ms365ClientIdHint": "Azure App Registration Client ID",
+    "ms365ClientSecret": "Microsoft 365 Client Secret",
+    "ms365ClientSecretHint": "Azure App Registration Client Secret",
+    "ms365TenantId": "Microsoft 365 Tenant ID",
+    "ms365TenantIdHint": "Azure AD Tenant ID"
+  },
+  "channels": {
+    "outlook": "Outlook",
+    "outlookWarning": "Enable MS365 MCP first",
+    "outlookInfo": "Extracts important tasks from inbox and executes them automatically",
+    "confluence": "Confluence",
+    "confluenceWarning": "Enable Atlassian MCP first",
+    "confluenceInfo": "Detects updated pages and saves important content to memory",
+    "jira": "Jira",
+    "jiraWarning": "Enable Atlassian MCP first",
+    "jiraInfo": "Checks assigned issues and executes required tasks automatically",
+    "checkInterval": "Check Interval (minutes)",
+    "checkIntervalHint": "Inbox check frequency",
+    "jiraCheckIntervalHint": "Assigned issue check frequency",
+    "checkHours": "Time Range (hours)",
+    "checkHoursHint": "Only check pages updated within last N hours"
+  },
+  "suggester": {
+    "title": "Dynamic Suggester",
+    "interval": "Suggestion Interval (minutes)"
+  },
+  "dialogs": {
+    "uvRequired": "uv Installation Required",
+    "uvMessage": "Python package manager (uv) is required.\nWould you like to install it automatically?",
+    "autoInstall": "Auto Install",
+    "cancel": "Cancel",
+    "installComplete": "Installation Complete",
+    "uvInstallSuccess": "uv has been installed successfully.\nYou can now start the server.",
+    "installFailed": "Installation Failed",
+    "uvInstallFailed": "uv installation failed.\nManual install: curl -LsSf https://astral.sh/uv/install.sh | sh",
+    "updateAvailable": "Update Available",
+    "updateAvailableMessage": "Version {{version}} is now available.\nDownload will start in the background.",
+    "ok": "OK",
+    "updateReady": "Update Ready",
+    "updateReadyMessage": "Version {{version}} has been downloaded.\nWould you like to restart now to apply the update?",
+    "restartNow": "Restart Now",
+    "later": "Later"
+  },
+  "language": {
+    "label": "Language",
+    "ko": "한국어",
+    "en": "English"
+  },
+  "remoteMcp": {
+    "info": "Add custom Remote MCP servers. Each server will be available as mcp__NAME__* tools.",
+    "addServer": "Add Server",
+    "name": "Server Name",
+    "nameHint": "Use lowercase letters, numbers, and hyphens only (e.g., myserver)",
+    "url": "Server URL",
+    "instruction": "Usage Instructions",
+    "instructionPlaceholder": "Describe when and how to use this MCP",
+    "toolHint": "Enter a name to see the tool format",
+    "toolHintFormat": "Use mcp__{name}__* for the following: {instruction}"
+  }
+}

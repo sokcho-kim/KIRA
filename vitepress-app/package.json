@@ -1,0 +1,19 @@
+{
+  "name": "vitepress-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "sync-version": "node scripts/sync-version.js",
+    "deploy": "npm run sync-version && npm run docs:build && aws s3 sync .vitepress/dist s3://kira-releases --delete --exclude 'download/*' && aws cloudfront create-invalidation --distribution-id EU03W5ZNSG0E --paths '/*'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

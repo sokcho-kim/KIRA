@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@hapus/mcp-cache": "^0.1.0",
+    "pptxgenjs": "^4.0.1"
+  }
+}
