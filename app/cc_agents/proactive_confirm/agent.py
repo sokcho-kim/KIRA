@@ -18,6 +18,7 @@ from app.cc_utils.confirm_db import (
     get_channel_pending_confirms,
     update_confirm_response,
 )
+from app.config.settings import get_settings
 
 
 def create_system_prompt() -> str:
@@ -74,6 +75,8 @@ async def call_proactive_confirm(
         - (True, original_message): 승인됨, original_message 처리 필요
         - (False, None): 거부되거나 pending confirm 없음
     """
+    settings = get_settings()
+
     # 1. pending confirm 조회 (thread_ts로 격리)
     pending_confirms = get_channel_pending_confirms(channel_id, user_id, thread_ts)
 
@@ -92,7 +95,7 @@ async def call_proactive_confirm(
 
     options = ClaudeAgentOptions(
         system_prompt=system_prompt,
-        model="haiku",
+        model=settings.HAIKU_MODEL,
         permission_mode="bypassPermissions",
         allowed_tools=["*"],
         disallowed_tools=[

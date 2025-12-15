@@ -97,7 +97,7 @@ Lokka MCP (Microsoft 365 MCP)를 사용하여 읽지 않은 이메일 목록을 
     try:
         options = ClaudeAgentOptions(
             system_prompt=system_prompt,
-            model="haiku",
+            model=settings.HAIKU_MODEL,
             permission_mode="bypassPermissions",
             allowed_tools=["*"],
             disallowed_tools=[

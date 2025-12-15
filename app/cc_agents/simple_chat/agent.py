@@ -137,6 +137,8 @@ async def call_simple_chat(
     Returns:
         bool: 간단한 대화로 처리했으면 True, 복잡한 작업이면 False
     """
+    settings = get_settings()
+
     # state_prompt 생성
     state_prompt = create_state_prompt(slack_data, message_data)
 
@@ -155,7 +157,7 @@ async def call_simple_chat(
             "slack": create_slack_mcp_server(),
         },
         system_prompt=system_prompt,
-        model="haiku",
+        model=settings.HAIKU_MODEL,
         permission_mode="bypassPermissions",
         allowed_tools=[
             "mcp__slack__answer",

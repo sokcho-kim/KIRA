@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     # 공통 환경
     APP_ENV: str = ""
 
+    # 모델명 (Vertex AI 사용 여부에 따라 동적으로 설정)
+    HAIKU_MODEL: str = "haiku"
+
     # SLACK 관련
     SLACK_BOT_TOKEN: str = ""
     SLACK_APP_TOKEN: str = ""
@@ -135,6 +138,7 @@ class Settings(BaseSettings):
             os.environ['ANTHROPIC_VERTEX_PROJECT_ID'] = "dl-service-dev"
             os.environ['ANTHROPIC_VERTEX_REGION'] = 'us-east5'
             os.environ['CLAUDE_CODE_USE_VERTEX'] = "1"
+            self.HAIKU_MODEL = "claude-haiku-4-5@20251001"
 
 @lru_cache
 def get_settings() -> Settings:

@@ -95,7 +95,7 @@ async def call_memory_retriever(
 
     options = ClaudeAgentOptions(
         system_prompt=system_prompt,
-        model="haiku",
+        model=settings.HAIKU_MODEL,
         permission_mode="bypassPermissions",
         allowed_tools=["*"],
         disallowed_tools=[
