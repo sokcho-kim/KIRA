@@ -67,6 +67,50 @@ def init_db():
     conn.close()
 
 
+def cancel_user_pending_confirms(user_id: str, channel_id: str, thread_ts: str = None) -> int:
+    """
+    특정 채널/스레드에서 특정 사용자의 pending confirm들을 expired 상태로 변경
+    새 제안이 나갈 때 이전 제안들을 취소하기 위해 사용
+
+    Args:
+        user_id: 사용자 ID
+        channel_id: 채널 ID
+        thread_ts: 스레드 타임스탬프 (None이면 메인 채널만)
+
+    Returns:
+        취소된 confirm 수
+    """
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    updated_at = datetime.now().isoformat()
+
+    if thread_ts:
+        # 특정 스레드의 pending만 취소
+        cursor.execute("""
+            UPDATE confirms
+            SET confirmed = -2,
+                status = 'expired',
+                updated_at = ?
+            WHERE user_id = ? AND channel_id = ? AND thread_ts = ? AND confirmed = 0
+        """, (updated_at, user_id, channel_id, thread_ts))
+    else:
+        # 메인 채널(thread_ts=NULL)의 pending만 취소
+        cursor.execute("""
+            UPDATE confirms
+            SET confirmed = -2,
+                status = 'expired',
+                updated_at = ?
+            WHERE user_id = ? AND channel_id = ? AND thread_ts IS NULL AND confirmed = 0
+        """, (updated_at, user_id, channel_id))
+
+    conn.commit()
+    cancelled_count = cursor.rowcount
+    conn.close()
+
+    return cancelled_count
+
+
 def add_confirm_request(
     confirm_id: str,
     channel_id: str,
@@ -78,6 +122,7 @@ def add_confirm_request(
 ) -> bool:
     """
     새로운 confirm 요청 추가
+    추가 전에 해당 채널에서 해당 사용자의 이전 pending confirm들을 자동으로 취소함
 
     Args:
         confirm_id: confirm 고유 ID
@@ -91,6 +136,13 @@ def add_confirm_request(
     Returns:
         추가 성공 여부
     """
+    import logging
+
+    # 먼저 해당 채널/스레드에서 해당 사용자의 이전 pending confirm들을 취소
+    cancelled = cancel_user_pending_confirms(user_id, channel_id, thread_ts)
+    if cancelled > 0:
+        logging.info(f"[CONFIRM_DB] Cancelled {cancelled} previous pending confirms for user {user_id} in channel {channel_id} (thread_ts={thread_ts})")
+
     conn = get_connection()
     cursor = conn.cursor()
 

@@ -158,8 +158,14 @@ async def call_proactive_confirm(
                         logging.info(f"[PROACTIVE_CONFIRM] Approved! Returning reconstructed original_message")
                         return True, reconstructed_message
                     else:
-                        # 거부: DB 업데이트 없이 False 반환 (5분 타임아웃으로 자연스럽게 만료)
-                        logging.info(f"[PROACTIVE_CONFIRM] Rejected or not related")
+                        # 거부: DB 업데이트하여 rejected 상태로 변경
+                        update_confirm_response(
+                            confirm_id=confirm_id,
+                            user_id=user_id,
+                            approved=False,
+                            response=user_text
+                        )
+                        logging.info(f"[PROACTIVE_CONFIRM] Rejected, marked as rejected in DB")
                         return False, None
 
     except Exception as e:
