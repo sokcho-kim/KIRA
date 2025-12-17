@@ -48,6 +48,9 @@ def create_system_prompt(bot_name: str) -> str:
   - {korean_patterns}
   English patterns:
   - "{bot_name}", "Hey {bot_name}", "Hi {bot_name}", "{bot_name}," (case-insensitive)
+  Slack mention patterns (IMPORTANT - these are direct calls):
+  - "{bot_name} (@U...)" or "({bot_name}) (@U...)" followed by "님", "씨", etc.
+  - Any message containing the target name with a Slack user ID mention (@U...) is a direct call
 3. If the target name is mentioned but NOT directly addressed, respond with false.
 4. If the target name is not present at all, respond with false.
 </important_actions>
