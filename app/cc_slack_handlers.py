@@ -495,6 +495,11 @@ def register_handlers(app):
 
     # === 무시되는 이벤트들 (로그만) ===
 
+    # app_mention - 봇 멘션 알림 (message 이벤트로 이미 처리됨)
+    @app.event("app_mention")
+    async def ignore_app_mention(body, logger):
+        logger.debug("app_mention event ignored (already handled via message event)")
+
     # file_shared - 파일 공유 알림 (message 이벤트로 이미 처리됨)
     @app.event("file_shared")
     async def ignore_file_shared(body, logger):
