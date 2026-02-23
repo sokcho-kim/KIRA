@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 
+
 # Electron
 electron-app/node_modules/
 electron-app/dist/
@@ -180,3 +181,4 @@ reports/
 temp_*.csv
 
 evaluation/results/*builds/
+jobs*
